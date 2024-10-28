@@ -1,180 +1,180 @@
-// // 1 - arrays
-// const lista = [1, 2, 3, 4, 5]
+// 1 - arrays
+const lista = [1, 2, 3, 4, 5]
 
-// console.log(lista);
+console.log(lista);
 
-// console.log(typeof lista); // object
+console.log(typeof lista); // object
 
-// const itens = ["Victor", true, 2, 4.12, []]
+const itens = ["Victor", true, 2, 4.12, []]
 
-// console.log(itens);
+console.log(itens);
 
-// // 2 = mais sobre arrays
-// const arr = ["a", "b", "c", "d"];
+// 2 = mais sobre arrays
+const arr = ["a", "b", "c", "d"];
 
-// console.log(arr[0]); // a
-// console.log(arr[2]); // c
+console.log(arr[0]); // a
+console.log(arr[2]); // c
 
-// // 3 - propriedades
-// const numbers = [1, 2, 3];
+// 3 - propriedades
+const numbers = [1, 2, 3];
 
-// console.log(numbers.length);
+console.log(numbers.length);
 
-// console.log(numbers["length"]);
+console.log(numbers["length"]);
 
-// const myName = "Victor";
+const myName = "Victor";
 
-// console.log(myName.length);
+console.log(myName.length);
 
-// // 4 - métodos
-// const otherNumbers = [1, 2, 3];
+// 4 - métodos
+const otherNumbers = [1, 2, 3];
 
-// const allNumbers = numbers.concat(otherNumbers);
+const allNumbers = numbers.concat(otherNumbers);
 
-// console.log(allNumbers);
+console.log(allNumbers);
 
-// const text = "Algum texto";
+const text = "Algum texto";
 
-// console.log(text.toUpperCase());
+console.log(text.toUpperCase());
 
-// console.log(typeof text.toUpperCase);
+console.log(typeof text.toUpperCase);
 
-// console.log(text.indexOf("g")); // 2
+console.log(text.indexOf("g")); // 2
 
-// // 5 - objetos
-// const person = {
-//     name: "Victor",
-//     age: 32,
-//     job: "Programador",
-// };
+// 5 - objetos
+const person = {
+    name: "Victor",
+    age: 32,
+    job: "Programador",
+};
 
-// console.log(person);
-// console.log(person.name);
-// console.log(person.name.length);
+console.log(person);
+console.log(person.name);
+console.log(person.name.length);
 
-// console.log(typeof person);
+console.log(typeof person);
 
-// // 6 - criando e deletando propriedades
-// const car = {
-//     engine: "2.0",
-//     brand: "VW",
-//     model: "Tiguan",
-//     km: 20000,
-// };
+// 6 - criando e deletando propriedades
+const car = {
+    engine: "2.0",
+    brand: "VW",
+    model: "Tiguan",
+    km: 20000,
+};
 
-// console.log(car)
+console.log(car)
 
-// car.doors = 4;
+car.doors = 4;
 
-// console.log(car);
+console.log(car);
 
-// delete car.km;
+delete car.km;
 
-// console.log(car);
+console.log(car);
 
-// // 7- mais sobre objetos
-// const obj = {
-//     a: "teste",
-//     b: true
-// };
+// 7- mais sobre objetos
+const obj = {
+    a: "teste",
+    b: true
+};
 
-// console.log(obj instanceof Object);
+console.log(obj instanceof Object);
 
-// const obj2 = {
-//     c: []
-// }
+const obj2 = {
+    c: []
+}
 
-// Object.assign(obj2, obj);
+Object.assign(obj2, obj);
 
-// console.log(obj2);
+console.log(obj2);
 
-// // 8 - conhecendo melhor os objetos
-// console.log(Object.keys(obj));
-// console.log(Object.keys(obj2));
-// console.log(Object.keys(car));
+// 8 - conhecendo melhor os objetos
+console.log(Object.keys(obj));
+console.log(Object.keys(obj2));
+console.log(Object.keys(car));
 
-// console.log(Object.entries(car));
+console.log(Object.entries(car));
 
-// // 9 - Mutação
-// const a = {
-//     name: "Victor"
-// }
+// 9 - Mutação
+const a = {
+    name: "Victor"
+}
 
-// const b = a;
+const b = a;
 
-// console.log(a);
-// console.log(b);
+console.log(a);
+console.log(b);
 
-// console.log(a === b) //true;
+console.log(a === b) //true;
 
-// a.age = 31;
+a.age = 31;
 
-// console.log(a);
-// console.log(b);
+console.log(a);
+console.log(b);
 
-// delete b.age
-// console.log(a);
-// console.log(b);
+delete b.age
+console.log(a);
+console.log(b);
 
-// // 10 - loop em array
-// const users = ["Victor", "João", "Pedro"];
+// 10 - loop em array
+const users = ["Victor", "João", "Pedro"];
 
-// for(let i = 0; i < users.length; i++) {
-//     console.log(`Listando o usuário: ${users[i]}`);
-// }
+for(let i = 0; i < users.length; i++) {
+    console.log(`Listando o usuário: ${users[i]}`);
+}
 
-// // 11 - push e pop
-// const array = ["a", "b", "c"];
+// 11 - push e pop
+const array = ["a", "b", "c"];
 
-// array.push("d");
+array.push("d");
 
-// console.log(array);
+console.log(array);
 
-// array.pop();
+array.pop();
 
-// console.log(array);
+console.log(array);
 
-// const itemRemovido = array.pop();
+const itemRemovido = array.pop();
 
-// console.log(array);
-// console.log(itemRemovido);
+console.log(array);
+console.log(itemRemovido);
 
-// array.push("z", "x", "y");
+array.push("z", "x", "y");
 
-// console.log(array)
+console.log(array)
 
-// // 12 - shift e unshift
+// 12 - shift e unshift
 
-// const letters = ["a", "b", "c"];
+const letters = ["a", "b", "c"];
 
-// // remove no início
-// const letter = letters.shift();
+// remove no início
+const letter = letters.shift();
 
-// console.log(letter)
-// console.log(letters)
+console.log(letter)
+console.log(letters)
 
-// // adiciona no início!
-// letters.unshift("p", "q", "r");
+// adiciona no início!
+letters.unshift("p", "q", "r");
 
-// letters.unshift("z");
+letters.unshift("z");
 
-// console.log(letters)
+console.log(letters)
 
-// // 13 - indexOf e lastIndexOf
+// 13 - indexOf e lastIndexOf
 
-// const myElements = ["Morango", "Banana", "Abacate", "Pêra", "Abacate"]
+const myElements = ["Morango", "Banana", "Abacate", "Pêra", "Abacate"]
 
-// console.log(myElements.indexOf("Banana"));
+console.log(myElements.indexOf("Banana"));
 
-// console.log(myElements.indexOf("Abacate")); // 2
+console.log(myElements.indexOf("Abacate")); // 2
 
-// console.log(myElements[2]);
+console.log(myElements[2]);
 
-// console.log(myElements[myElements.indexOf("Abacate")]);
+console.log(myElements[myElements.indexOf("Abacate")]);
 
-// console.log(myElements.lastIndexOf("Abacate")); // 4
+console.log(myElements.lastIndexOf("Abacate")); // 4
 
-// // quando o resultado não é encontrado o resultado é -1
+// quando o resultado não é encontrado o resultado é -1
 
 // 14 - slice
 const testeSlice = ["a", "b", "c", "d", "e", "f"];
@@ -230,19 +230,18 @@ const reverseTest = [1, 2, 3, 4, 5];
 
 reverseTest.reverse();
 
-// inverteu a ordem! 
+// inverteu a ordem!
 console.log(reverseTest);
-
 
 // 18 - trim
 // O trim remove tudo que não é texto em uma string, como caracteres especiais e espaços em branco
 
 const trimTest = "   testando \n";
 
-console.log(trimTest)
+console.log(trimTest);
 console.log(trimTest.trim());
 
-console.log(trimTest.length)
+console.log(trimTest.length);
 console.log(trimTest.trim().length);
 
 // 19 - padstart
@@ -251,7 +250,7 @@ const testePadStart = "1";
 
 const newNumber = testePadStart.padStart(4, "0");
 
-console.log(testePadStart)
+console.log(testePadStart);
 console.log(newNumber);
 
 const testePadEnd = newNumber.padEnd(10, "0");
@@ -259,7 +258,7 @@ const testePadEnd = newNumber.padEnd(10, "0");
 console.log(testePadEnd);
 
 // 20 - split
-const frase = "O rato roeu a roupa"
+const frase = "O rato roeu a roupa";
 
 const arrayDaFrase = frase.split(" ");
 
@@ -275,3 +274,89 @@ const itensParaComprar = ["Mouse", "Teclado", "Monitor"];
 const fraseDeCompra = `Precisamos comprar: ${itensParaComprar.join(", ")}`;
 
 console.log(fraseDeCompra);
+
+// 22 - repeat
+const palavra = "Testando ";
+console.log(palavra.repeat(5));
+
+// 23 - rest operator
+// infinitos argumentos a uma função
+const somaInfinita = (...args) => {
+    let total = 0;
+
+    for (let i = 0; i < args.length; i++) {
+        total += args[i];
+    }
+
+    return total;
+};
+
+console.log(somaInfinita(1, 2, 3));
+console.log(somaInfinita(1, 20, 34, 1000));
+
+// 24 - for of
+const somaInfinita2 = (...args) => {
+    let total = 0;
+
+    for(num of args) {
+        total += num;
+    }
+
+    return total;
+}
+
+console.log(somaInfinita2(1, 2, 4));
+
+// 25 - destructuring em objetos
+const userDetails = {
+    firstName: "Matheus",
+    lastName: "Battisti",
+    job: "Programador"
+}
+
+// const firstName = userDetails.firstName
+const {firstName, lastName, job} = userDetails;
+
+console.log(firstName, lastName, job);
+
+// renomear variáveis
+const {firstName: primeiroNome} = userDetails;
+
+console.log(primeiroNome);
+
+// 26 - destructuring com arrays
+const myList = ["Avião", "Submarino", "Carro", "Trator"]
+
+const [veiculoA, veiculoB, veiculoC, d, e] = myList;
+
+console.log(veiculoA, veiculoB, veiculoC, d, e);
+
+// 27 - JSON
+const myJson = '{"name": "Victor", "age": 32, "skills": ["PHP", "JavaScript", "Python"]}';
+
+console.log(myJson);
+
+console.log(typeof myJson);
+
+// 28 - JSON para objeto e objeto para JSON
+const myObject = JSON.parse(myJson);
+
+console.log(myObject);
+console.log(myObject.name);
+console.log(typeof myObject);
+
+// json invalido
+const badJson = '{"name": Matheus, "age": 30}';
+
+// const myBadObject = JSON.parse(badJson);
+
+myObject.isOpenToWork = true;
+console.log(myObject);
+
+// "foi para a API em formato de texto"
+const myNewJson = JSON.stringify(myObject);
+console.log(myNewJson);
+
+
+
+
