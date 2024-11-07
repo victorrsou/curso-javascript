@@ -1,184 +1,184 @@
-// // 1 - métodos
-// const animal = {
-//     nome: "Bob",
-//     latir: function () {
-//         console.log("Au Au");
-//     },
-// };
+// 1 - métodos
+const animal = {
+    nome: "Bob",
+    latir: function () {
+        console.log("Au Au");
+    },
+};
 
-// console.log(animal.nome);
+console.log(animal.nome);
 
-// animal.latir();
+animal.latir();
 
-// // 2 - aprofundando em métodos
-// const pessoa = {
-//     nome: "Victor",
+// 2 - aprofundando em métodos
+const pessoa = {
+    nome: "Victor",
 
-//     getNome: function () {
-//         return this.nome;
-//     },
+    getNome: function () {
+        return this.nome;
+    },
 
-//     setNome: function (novoNome) {
-//         this.nome = novoNome;
-//     },
-// };
+    setNome: function (novoNome) {
+        this.nome = novoNome;
+    },
+};
 
-// console.log(pessoa.nome);
-// console.log(pessoa.getNome());
+console.log(pessoa.nome);
+console.log(pessoa.getNome());
 
-// pessoa.setNome("Joaquim");
+pessoa.setNome("Joaquim");
 
-// console.log(pessoa.getNome());
-// console.log(pessoa.nome);
+console.log(pessoa.getNome());
+console.log(pessoa.nome);
 
-// // 3 - prototype
-// const text = "teste";
+// 3 - prototype
+const text = "teste";
 
-// // conhecer o ancestral do texto
-// console.log(Object.getPrototypeOf(text));
+// conhecer o ancestral do texto
+console.log(Object.getPrototypeOf(text));
 
-// const bool = true;
+const bool = true;
 
-// console.log(Object.getPrototypeOf(bool));
+console.log(Object.getPrototypeOf(bool));
 
-// const arr = [];
+const arr = [];
 
-// console.log(arr.length);
+console.log(arr.length);
 
-// console.log(Object.getPrototypeOf(arr));
+console.log(Object.getPrototypeOf(arr));
 
-// // 4 - mais sobre o prototype
-// const myObject = {
-//     a: "B",
-// };
+// 4 - mais sobre o prototype
+const myObject = {
+    a: "B",
+};
 
-// console.log(Object.getPrototypeOf(myObject));
-// console.log(Object.getPrototypeOf(myObject) === Object.prototype);
+console.log(Object.getPrototypeOf(myObject));
+console.log(Object.getPrototypeOf(myObject) === Object.prototype);
 
-// const mySecondObject = Object.create(myObject);
+const mySecondObject = Object.create(myObject);
 
-// console.log(mySecondObject);
+console.log(mySecondObject);
 
-// console.log(mySecondObject.a);
+console.log(mySecondObject.a);
 
-// console.log(Object.getPrototypeOf(mySecondObject) === myObject);
+console.log(Object.getPrototypeOf(mySecondObject) === myObject);
 
-// // 5 - classes básicas
-// const cachorro = {
-//     raca: null,
-//     patas: 4,
-// };
+// 5 - classes básicas
+const cachorro = {
+    raca: null,
+    patas: 4,
+};
 
-// const pastorAlemao = Object.create(cachorro);
+const pastorAlemao = Object.create(cachorro);
 
-// pastorAlemao.raca = "Pastor Alemão";
-// console.log(pastorAlemao);
-// console.log(pastorAlemao.patas);
+pastorAlemao.raca = "Pastor Alemão";
+console.log(pastorAlemao);
+console.log(pastorAlemao.patas);
 
-// const bulldog = Object.create(cachorro);
+const bulldog = Object.create(cachorro);
 
-// bulldog.raca = "Bulldog";
+bulldog.raca = "Bulldog";
 
-// console.log(bulldog);
+console.log(bulldog);
 
-// // 6 - função como classe - função construtora
-// function criarCachorro(nome, raca) {
-//     const cachorro = Object.create({});
+// 6 - função como classe - função construtora
+function criarCachorro(nome, raca) {
+    const cachorro = Object.create({});
 
-//     cachorro.nome = nome;
-//     cachorro.raca = raca;
+    cachorro.nome = nome;
+    cachorro.raca = raca;
 
-//     return cachorro;
-// }
+    return cachorro;
+}
 
-// const bob = criarCachorro("Bob", "Vira Lata");
+const bob = criarCachorro("Bob", "Vira Lata");
 
-// console.log(bob);
+console.log(bob);
 
-// const jack = criarCachorro("Jack", "Poodle");
-// console.log(jack);
-// console.log(Object.getPrototypeOf(jack));
-// console.log(jack.raca);
+const jack = criarCachorro("Jack", "Poodle");
+console.log(jack);
+console.log(Object.getPrototypeOf(jack));
+console.log(jack.raca);
 
-// // 7 - funções como classe
-// function Cachorro(nome, raca) {
-//     (this.nome = nome), (this.raca = raca);
-// }
+// 7 - funções como classe
+function Cachorro(nome, raca) {
+    (this.nome = nome), (this.raca = raca);
+}
 
-// const husky = new Cachorro("Ozzy", "Husky");
-// console.log(husky);
+const husky = new Cachorro("Ozzy", "Husky");
+console.log(husky);
 
-// // 8 - métodos na funcao construtora
-// Cachorro.prototype.uivar = function () {
-//     console.log("Auuuu!");
-// };
+// 8 - métodos na funcao construtora
+Cachorro.prototype.uivar = function () {
+    console.log("Auuuu!");
+};
 
-// console.log(Cachorro);
+console.log(Cachorro);
 
-// // método inserido no prototype, portanto não aparece!
-// husky.uivar();
+// método inserido no prototype, portanto não aparece!
+husky.uivar();
 
-// // 9 - classes es6
-// class CachorroClasse {
-//     constructor(nome, raca) {
-//         this.nome = nome;
-//         this.raca = raca;
-//     }
-// }
+// 9 - classes es6
+class CachorroClasse {
+    constructor(nome, raca) {
+        this.nome = nome;
+        this.raca = raca;
+    }
+}
 
-// const jeff = new CachorroClasse("Jeff", "Labrador");
+const jeff = new CachorroClasse("Jeff", "Labrador");
 
-// console.log(jeff);
-// console.log(Object.getPrototypeOf(jeff));
+console.log(jeff);
+console.log(Object.getPrototypeOf(jeff));
 
-// // 10 - mais sobre classes
-// class Caminhao {
-//     constructor(eixos, cor) {
-//         this.eixos = eixos;
-//         this.cor = cor;
-//     }
+// 10 - mais sobre classes
+class Caminhao {
+    constructor(eixos, cor) {
+        this.eixos = eixos;
+        this.cor = cor;
+    }
 
-//     descreverCaminhao() {
-//         console.log(
-//             `Este caminhão tem ${this.eixos} eixos e possui a cor ${this.cor}`
-//         );
-//     }
-// }
+    descreverCaminhao() {
+        console.log(
+            `Este caminhão tem ${this.eixos} eixos e possui a cor ${this.cor}`
+        );
+    }
+}
 
-// const scania = new Caminhao(6, "Vermelha");
+const scania = new Caminhao(6, "Vermelha");
 
-// scania.descreverCaminhao();
+scania.descreverCaminhao();
 
-// Caminhao.motor = 4; // errado
+Caminhao.motor = 4; // errado
 
-// const c2 = new Caminhao(4, "Preta");
+const c2 = new Caminhao(4, "Preta");
 
-// console.log(c2);
+console.log(c2);
 
-// console.log(c2.motor); // undefined
+console.log(c2.motor); // undefined
 
-// Caminhao.prototype.motor = 5.0;
+Caminhao.prototype.motor = 5.0;
 
-// const c3 = new Caminhao(6, "Azul");
+const c3 = new Caminhao(6, "Azul");
 
-// console.log(c3.motor);
+console.log(c3.motor);
 
-// // 11 - override
-// class Humano {
-//     constructor(nome, idade) {
-//         this.nome = nome;
-//         this.idade = idade;
-//     }
-// }
+// 11 - override
+class Humano {
+    constructor(nome, idade) {
+        this.nome = nome;
+        this.idade = idade;
+    }
+}
 
-// const victor = new Humano("Victor", 32);
+const victor = new Humano("Victor", 32);
 
-// console.log(victor);
-// console.log(Humano.prototype.idade); // undefined
-// Humano.prototype.idade = "Não definida";
+console.log(victor);
+console.log(Humano.prototype.idade); // undefined
+Humano.prototype.idade = "Não definida";
 
-// console.log(victor.idade);
-// console.log(Humano.prototype.idade); // não definida
+console.log(victor.idade);
+console.log(Humano.prototype.idade); // não definida
 
 // 12 - symbol
 class Aviao {
